@@ -1,4 +1,4 @@
-package im대비undo;
+package baekjoon;
 
 import java.util.Scanner;
 
@@ -13,14 +13,24 @@ public class Main_2941_크로아티아알파벳 {
 			switch (s.charAt(i)) {
 			case '=':
 				if(i>1 && s.charAt(i-1)=='z' && s.charAt(i-2)=='d') {
-					count-=2;
+					count-=1;
 				}
 				break;
-		
-
+			case '-':
+				break;
+			case 'j':
+				if((i>0 && s.charAt(i-1)=='l') || (i>0 && s.charAt(i-1)=='n')) {
+					
+				}else {
+					count++;
+				}
+				break;
 			default:
+				count++;
 				break;
 			}
 		}
+		
+		System.out.println(count);
 	}
 }
